@@ -28,6 +28,15 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    //MARK: - Button start
+    let startButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 20
+        button.setTitle("START", for: .normal)
+        button.backgroundColor = .label
+        button.translatesAutoresizingMaskIntoConstraints = false
+       return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
