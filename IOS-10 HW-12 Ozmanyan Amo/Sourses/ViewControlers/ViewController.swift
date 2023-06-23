@@ -8,11 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+//MARK: - gradient of background
+    private lazy var gradient: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.systemRed.cgColor, UIColor.yellow.cgColor]
+        gradient.startPoint = CGPoint(x: 0.5, y: 0)
+        gradient.endPoint = CGPoint(x: 0.5, y: 1)
+        return gradient
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
-        // Do any additional setup after loading the view.
+        view.layer.insertSublayer(gradient, at: 0)
     }
 
 
