@@ -17,7 +17,18 @@ class ViewController: UIViewController {
         gradient.endPoint = CGPoint(x: 0.5, y: 1)
         return gradient
     }()
-
+    //MARK: - lesson Label
+    let lessonlABEL: UILabel = {
+        let label = UILabel()
+        label.text = "Работаем в темпе"
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.textColor = .black
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
