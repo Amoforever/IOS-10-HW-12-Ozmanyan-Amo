@@ -4,7 +4,7 @@
 //
 //  Created by Amahastla on 23.06.2023.
 //
-
+import SnapKit
 import UIKit
 
 class ViewController: UIViewController {
@@ -38,12 +38,21 @@ class ViewController: UIViewController {
        return button
     }()
     
+    //MARK: - shape view
+    let shapeView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "slowmo")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
         view.layer.insertSublayer(gradient, at: 0)
+        setConstraints()
     }
-
-
 }
+
 
