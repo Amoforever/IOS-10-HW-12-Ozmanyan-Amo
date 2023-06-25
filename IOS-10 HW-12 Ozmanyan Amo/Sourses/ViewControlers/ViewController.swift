@@ -18,9 +18,9 @@ class ViewController: UIViewController {
         return gradient
     }()
     //MARK: - lesson Label
-    let lessonlABEL: UILabel = {
+    let lessonLabel: UILabel = {
         let label = UILabel()
-        label.text = "Работаем в темпе"
+        label.text = "РАБОТАЕМ В ТЕМПЕ"
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textColor = .black
         label.numberOfLines = 0
@@ -41,18 +41,47 @@ class ViewController: UIViewController {
     //MARK: - shape view
     let shapeView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "slowmo")
+        imageView.image = UIImage(systemName: "slowmo")?.withTintColor(.lightGray, renderingMode: .alwaysOriginal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    //MARK: - timer Label
+    let timerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "25"
+        label.font = UIFont.boldSystemFont(ofSize: 84)
+        label.textColor = .black
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 
+    var timer = Timer()
+    
+    
+    
+    var durationTimer = 25
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
         view.layer.insertSublayer(gradient, at: 0)
         setConstraints()
+        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
     }
+    @objc func startButtonTapped() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+    }
+    @objc func timerAction() {
+        durationTimer -= 1
+        timerLabel.text = "\(durationTimer)"
+        print(durationTimer)
+        if durationTimer == 0 {
+            timer.invalidate()
+        }
+    }
+
 }
 
 
