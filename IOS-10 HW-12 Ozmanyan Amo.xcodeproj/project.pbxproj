@@ -12,7 +12,7 @@
 		CED58A7A2A45D298001173A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED58A792A45D298001173A6 /* ViewController.swift */; };
 		CED58A7F2A45D299001173A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED58A7E2A45D299001173A6 /* Assets.xcassets */; };
 		CED58A822A45D299001173A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED58A802A45D299001173A6 /* LaunchScreen.storyboard */; };
-		CED58A912A47969B001173A6 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED58A902A47969B001173A6 /* extension.swift */; };
+		CED58A912A47969B001173A6 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED58A902A47969B001173A6 /* CircularProgressBarView.swift */; };
 		CED58A942A479714001173A6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CED58A932A479714001173A6 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		CED58A7E2A45D299001173A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED58A812A45D299001173A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CED58A832A45D299001173A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CED58A902A47969B001173A6 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		CED58A902A47969B001173A6 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 		CED58A8A2A45D62D001173A6 /* Sourses */ = {
 			isa = PBXGroup;
 			children = (
-				CED58A8F2A45D709001173A6 /* Extension */,
+				CED58A8F2A45D709001173A6 /* CircularProgressBarView */,
 				CED58A8E2A45D6DB001173A6 /* ViewControlers */,
 				CED58A8D2A45D6C0001173A6 /* Storyboards */,
 				CED58A892A45D604001173A6 /* App */,
@@ -117,12 +117,12 @@
 			path = ViewControlers;
 			sourceTree = "<group>";
 		};
-		CED58A8F2A45D709001173A6 /* Extension */ = {
+		CED58A8F2A45D709001173A6 /* CircularProgressBarView */ = {
 			isa = PBXGroup;
 			children = (
-				CED58A902A47969B001173A6 /* extension.swift */,
+				CED58A902A47969B001173A6 /* CircularProgressBarView.swift */,
 			);
-			path = Extension;
+			path = CircularProgressBarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +204,7 @@
 				CED58A7A2A45D298001173A6 /* ViewController.swift in Sources */,
 				CED58A762A45D298001173A6 /* AppDelegate.swift in Sources */,
 				CED58A782A45D298001173A6 /* SceneDelegate.swift in Sources */,
-				CED58A912A47969B001173A6 /* extension.swift in Sources */,
+				CED58A912A47969B001173A6 /* CircularProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
